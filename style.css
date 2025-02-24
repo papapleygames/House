@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #232323;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height:100%;
+  padding:0;
+
+}
+
+.playlist-container {
+  text-align: center;
+  display: flex;
+    flex-direction: column; /* Stack playlist items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Space between playlist items */
+    width: 32.5%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    background: #333; /* Background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsiveness for Mobile devices */
+@media (max-width: 640px){
+  .playlist-container{
+    width: 85%;
+    padding: 15px;
+  }
+  
+  .cover-image {
+    display: block;
+    width: 300px;
+    /*max-width:260px;*/
+  height: 160px;
+    border-radius: 8px;
+  margin-bottom: 0px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Responsiveness for tablet */
+@media (max-width: 1024px){
+  .playlist-container{
+    width: 50%;
+    padding: 15px;
+    margin-right: 10%;
+    margin-left:10%;
+  }
+}
+
+
+.playlist-title {
+    font-size: 18px;
+    color: #fff; /* Adjust the color as needed */
+    text-align: center; /* Centers the title above the cover image */
+    margin-bottom: 10px; /* Adds spacing below the title */
+    font-weight: bold;
+}
+
+.cover-image {
+width: 100%; /* Ensures the image scales to fit the container's width */
+  height: 160px; /* Maintains aspect ratio */
+  max-width: 640px; /* Prevents the image from exceeding its original dimensions */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.description-text {
+    font-style: italic; /* Makes the text italic */
+    color: #d3d3d3; /* Light grey color */
+    text-align: right; /* Centers the text */
+    margin: 0px 0; /* Adds spacing above and below the text */
+    margin-bottom: 15px;
+    font-size: 12px; /* Adjust size as needed */
+}
+
+.playlist {
+  width: 96%;
+  background-color: #444;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.track-wrapper {
+  margin-bottom: 20px;
+}
+
+.track-title {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #555;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.track:hover {
+  background-color: #666;
+}
+
+.track audio {
+  display: none;
+}
+
+.play-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.play-button::before {
+  content: '▶'; /* Play icon */
+  color: #fff;
+  font-size: 16px;
+}
+
+.play-button.pause::before {
+  content: '⏸'; /* Pause icon */
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #888;
+  border-radius: 2.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  width: 0;
+  height: 100%;
+  background-color: #1e90ff;
+  transition: width 0.1s linear;
+}
+
+.tags-text {
+    font-style: italic; /* Makes the text italic */
+    color: #d3d3d3; /* Light grey color */
+    text-align: left; /* Centers the text */
+    margin: 3px 0; /* Adds spacing above and below the text */
+    margin-bottom: 5px;
+    font-size: 12px; /* Adjust size as needed */
+}
+
+/* Center and style the download button */
+.download-button-container {
+    text-align: center; /* Centers the button within its container */
+    margin: 20px 0; /* Adds space above and below the button */
+}
+
+.download-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #6276F8, #0022FF); /* Gradient background */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.download-button:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow effect on hover */
+}
+
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 0px;
+  width:100%;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 10px 0; /* Add spacing between items */
+}
+
+.footer a {
+    color: #ACACAC;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    display: block; /* Ensures alignment when centered */
+}
+
+.footer a:hover {
+    color: #ffda79;
+}
